@@ -1,0 +1,47 @@
+.inner {
+  font-size: 2.6rem;
+  width: 35rem;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  letter-spacing: 0.2rem;
+  white-space: nowrap;
+  color: #fff;
+  overflow: hidden;
+}
+
+.inner:first-child {
+  background-color: #fd1e1e;
+  color: #fff;
+  transform-origin: right;
+  transform: perspective(5rem) rotateY(-15deg);
+}
+
+.inner:last-child {
+  background-color: #cc0c0c;
+  color: #fff;
+  transform-origin: left;
+  transform: perspective(5rem) rotateY(15deg);
+}
+
+.inner span {
+  position: absolute;
+  animation: marquee 5s linear infinite;
+}
+
+.inner:first-child span {
+  animation-delay: 2.5s;
+  left: -100%;
+}
+
+@keyframes marquee {
+  from {
+    left: 100%;
+  }
+
+  to {
+    left: -100%;
+  }
+}

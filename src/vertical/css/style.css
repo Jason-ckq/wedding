@@ -1,0 +1,409 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: ZCOOLXiaoWei;
+  src: url("font/ZCOOLXiaoWei-Regular.ttf");
+}
+
+@font-face {
+  font-family: Filxgirl;
+  src: url("./font/Filxgirl.ttf");
+}
+
+@font-face {
+  font-family: MaShanZhengRegular;
+  src: url("./font/MaShanZheng-Regular.ttf");
+}
+
+@font-face {
+  font-family: LongCang;
+  src: url("./font/LongCang-Regular.ttf");
+}
+
+@font-face {
+  font-family: Romance;
+  src: url("./font/Couple Valentine PERSONAL USE ONLY!.ttf");
+}
+
+body {
+  overflow: hidden;
+  /* display: flex; */
+  -webkit-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.wrap {
+  height: 100%;
+  background: #6b0d0a;
+  background: radial-gradient(#830604, #820406);
+  color: #f0d7b9;
+  color: #ececec;
+  color: #feeed4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0% 6%;
+  position: relative;
+}
+.side {
+  font-family: ZCOOLXiaoWei;
+  font-size: 18rem;
+  height: 28%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: -2rem;
+  font-weight: bold;
+  animation: wobble 5s ease-in-out infinite;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+  z-index: 2;
+}
+
+.content {
+  width: 58%;
+  height: 88%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 0;
+}
+
+.carousel {
+  height: 65%;
+  width: 100%;
+}
+
+.content > img {
+  height: 36%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: contain;
+}
+
+.word {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  padding-top: 2rem;
+}
+.word > span {
+  color: #ffbc6a;
+  display: inline-block;
+  font-family: ZCOOLXiaoWei;
+  font-weight: bold;
+  /* font-family: MaShanZhengRegular; */
+  font-size: 6rem;
+  margin: 0rem 0.2rem;
+  /* color: #ffbc6a; */
+  /* padding: 0.1rem 0.2rem; */
+  /* border-radius: 25rem; */
+}
+
+.happy {
+  /* font-family: Filxgirl; */
+  font-family: Romance;
+  color: #ffbc6a;
+  font-size: 2.6rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 8%;
+  letter-spacing: 0.2rem;
+}
+
+.summery {
+  display: flex;
+  height: 12%;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.name {
+  font-size: 2.1rem;
+
+  /* font-family: LongCang; */
+  font-family: MaShanZhengRegular;
+  letter-spacing: 0.1rem;
+}
+.name > span {
+  font-family: Filxgirl;
+}
+
+.date {
+  font-size: 2rem;
+  letter-spacing: 0.2rem;
+  font-family: Filxgirl;
+  font-weight: bolder;
+  position: relative;
+  top: 0.6rem;
+}
+.xi {
+  position: absolute;
+  width: 5rem;
+  /* filter: blur(0.04rem); */
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.xi1 {
+  top: 2%;
+  left: 18%;
+  transform: translate(0%, 0%);
+}
+
+.xi2 {
+  top: 2%;
+  right: 18%;
+  transform: translate(0%, 0%);
+}
+
+.xi3 {
+  top: 50%;
+  right: 22%;
+  transform: translate(0%, -50%);
+}
+.xi4 {
+  top: 50%;
+  left: 22%;
+  transform: translate(0%, -50%);
+}
+
+.xi5 {
+  bottom: 0.1%;
+  left: 2%;
+  transform: translate(0%, -20%);
+}
+
+.xi6 {
+  bottom: 0.1%;
+  left: 34%;
+  transform: translate(0%, -20%);
+}
+.xi7 {
+  bottom: 0.1%;
+  left: 60%;
+  transform: translate(0%, -20%);
+}
+
+.xi8 {
+  bottom: 0.1%;
+  right: 2%;
+  transform: translate(0%, -20%);
+}
+
+#canvas {
+  display: block;
+  position: absolute;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#c {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/*文字不可复制*/
+body {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background: #26282c;
+}
+
+ul {
+  position: absolute;
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-padding-start: 0px;
+}
+
+li {
+  position: absolute;
+  width: 6px;
+  height: 2px;
+  border-radius: 50% 1px 1px 50%;
+  transform-origin: 50%;
+  list-style: none;
+}
+
+.fire {
+  position: absolute;
+  top: 100%;
+  width: 6px;
+  height: 6px;
+  background: yellow;
+  border-radius: 50%;
+  float: left;
+}
+
+.change1 {
+  animation: change1 1s linear infinite;
+}
+
+@keyframes change1 {
+  from {
+    width: 3px;
+    height: 1px;
+    border-radius: 50% 1px 1px 50%;
+  }
+  to {
+    width: 18px;
+    height: 6px;
+    border-radius: 50% 3px 3px 50%;
+  }
+}
+
+.change2 {
+  animation: change2 0.5s linear infinite;
+}
+
+@keyframes change2 {
+  from {
+    width: 18px;
+    height: 6px;
+    border-radius: 50% 3px 3px 50%;
+    opacity: 1;
+  }
+  to {
+    width: 3px;
+    height: 1px;
+    border-radius: 50% 1px 1px 50%;
+    opacity: 0;
+  }
+}
+
+@import url(https://fonts.googleapis.com/css?family=Concert+One);
+
+h1 {
+  animation: glow 10s ease-in-out infinite;
+  /* For less laggy effect, uncomment this:
+  
+  animation:none;
+  -webkit-text-stroke:1px #fff; 
+  
+=========== */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+figure {
+  animation: wobble 5s ease-in-out infinite;
+  transform-origin: center center;
+  transform-style: preserve-3d;
+}
+
+@keyframes wobble {
+  0%,
+  100% {
+    transform: rotate3d(1, 1, 0, 15deg);
+  }
+  25% {
+    transform: rotate3d(-1, 1, 0, 15deg);
+  }
+  50% {
+    transform: rotate3d(-1, -1, 0, 15deg);
+  }
+  75% {
+    transform: rotate3d(1, -1, 0, 15deg);
+  }
+}
+
+h1 {
+  font-family: MaShanZhengRegular;
+  position: absolute;
+  font-size: 20rem;
+  /* color: #efd6b7; */
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    text-shadow: 0 0 0.3rem rgba(230, 12, 95, 0.377);
+  }
+  25% {
+    text-shadow: 0 0 0.3rem rgba(248, 41, 4, 0.397);
+  }
+  50% {
+    text-shadow: 0 0 0.3rem rgb(245, 24, 24, 0.4);
+  }
+  75% {
+    text-shadow: 0 0 0.3rem rgb(226, 52, 8, 0.4);
+  }
+}
+
+h1:nth-child(2) {
+  transform: translateZ(0.25rem);
+}
+h1:nth-child(3) {
+  transform: translateZ(0.5rem);
+}
+h1:nth-child(4) {
+  transform: translateZ(0.3rem);
+}
+h1:nth-child(5) {
+  transform: translateZ(1rem);
+}
+h1:nth-child(6) {
+  transform: translateZ(1.25rem);
+}
+h1:nth-child(7) {
+  transform: translateZ(1.5rem);
+}
+h1:nth-child(8) {
+  transform: translateZ(1.75rem);
+}
+h1:nth-child(9) {
+  transform: translateZ(2rem);
+}
+h1:nth-child(10) {
+  transform: translateZ(2.25rem);
+}
+
+#holder {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#bgMusic {
+  position: absolute;
+  display: none;
+}
+
+#playlist {
+  display: none;
+}
